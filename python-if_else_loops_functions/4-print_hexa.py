@@ -1,3 +1,3 @@
 #!/usr/bin/python3
 for index in range(99):
-    print("{}".format(index, hex(index)))
+    print("{:d} = 0x{:x}".format(index, index))
