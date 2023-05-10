@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-import sys
+__import__ sys
 if __name__ = "__main__":
     from add_0 import add
     a = 1
