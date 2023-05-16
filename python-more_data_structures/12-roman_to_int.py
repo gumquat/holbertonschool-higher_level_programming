@@ -7,8 +7,8 @@ def roman_to_int(roman_string):
     sum = 0
 
     for i in range(len(roman_string)):
-        if i > 0 and roman_numerals[roman_string[i]] > roman_numerals[roman_string[i - 1]]:
-            sum += roman_numerals[roman_string[i]] - 2 * roman_numerals[roman_string[i - 1]]
+        if i > 0 and rom_num[roman_string[i]] > rom_num[roman_string[i - 1]]:
+            sum += rom_num[roman_string[i]] - 2 * rom_num[roman_string[i - 1]]
         else:
-            sum += roman_numerals[roman_string[i]]
+            sum += rom_num[roman_string[i]]
     return sum
