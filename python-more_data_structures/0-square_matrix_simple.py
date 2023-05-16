@@ -1,9 +1,13 @@
 #!/usr/bin/python3
+def squaring (num):
+    return num ** num
+
 def square_matrix_simple(matrix=[]):
-    new_matrix=[]
-    
-    for idx1 in range (len(matrix)):
+
+    new_matrix = []
+    for i in range(len(matrix)):
         new_matrix.append([])
-        for idx2 in matrix[idx1]:
-            new_matrix[idx1].append(idx2 ** idx2)
-    return new_matrix
+        for j in matrix[i]:
+            new_matrix[i].append([])
+
+    return(map(squaring, new_matrix))
