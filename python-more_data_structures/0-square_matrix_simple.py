@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 def squaring(num):
-    return num ** num
+    return num ** 2
 
 def square_matrix_simple(matrix=[]):
 
@@ -11,4 +11,4 @@ def square_matrix_simple(matrix=[]):
         for j in matrix[i]:
             new_matrix[i].append([])
 
-    return(map(squaring, new_matrix[i]))
+    return(map(squaring, new_matrix))
