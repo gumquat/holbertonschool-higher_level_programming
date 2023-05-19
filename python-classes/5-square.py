@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 """SQUARE STUFF"""
 
-"""WHY THE FUCK AS MY OUTPUT INCORRECT IF I DIDNT HAVE THE () ON THE LINE BELOW???"""
+"""WHY IS MY OUTPUT INCORRECT IF I DONT HAVE THE () ON THE LINE BELOW???"""
 class Square():
     """this class defines squares"""
     def __init__(self, size=0):
