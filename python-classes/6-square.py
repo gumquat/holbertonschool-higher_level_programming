@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""WHY IS MY OUTPUT INCORRECT IF I DONT HAVE THE () ON THE LINE BELOW???"""
+"""WHY IS MY OUTPUT INCORRECT IF I *DO* HAVE THE () ON THE LINE BELOW???"""
 
 
 class Square:
