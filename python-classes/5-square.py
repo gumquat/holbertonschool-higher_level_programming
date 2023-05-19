@@ -25,7 +25,7 @@ class Square:
 
     def my_print(self):
         """print the square made of # symbols"""
-        if(self.__size == 0):
+        if(self.__size <= 0):
             print("")
         else:
             for peepee in range(self.__size):
