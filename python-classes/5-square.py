@@ -28,6 +28,7 @@ class Square:
         if(self._size <= 0):
             print()
         else:
-            for i in range(self._size):
-                print("#", end='')
+            for peepee in range(self._size):
+                for poopoo in range(self._size):
+                    print("#", end='')
             print()
