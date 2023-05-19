@@ -1,8 +1,8 @@
 #!/usr/bin/python3
-"""WHY IS MY OUTPUT INCORRECT IF I *DO* HAVE THE () ON THE LINE BELOW???"""
+"""WHY IS MY OUTPUT INCORRECT IF I DONT HAVE THE () ON THE LINE BELOW???"""
 
 
-class Square:
+class Square():
     """this class defines squares"""
     def __init__(self, size=0):
         self.__size = size
@@ -33,19 +33,15 @@ class Square:
             raise TypeError("position must be a tuple of 2 positive integers")
         self.__position = value
 
-    def area(self):
-        """calc & return area"""
-        return self.__size ** 2
-
     def my_print(self):
         if self.__size == 0:
             print()
         else:
-            for peepee in range(self.position[1]):
+            for i in range(self.position[1]):
                 print()
-            for peepee in range(self.size):
-                for poopoo in range(self.position[0]):
+            for i in range(self.size):
+                for d in range(self.position[0]):
                     print(end=" ")
-                for peepeepoopoo in range(self.size):
+                for k in range(self.size):
                     print("#", end="")
                 print()
