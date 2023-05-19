@@ -7,10 +7,6 @@ class Square():
     def __init__(self, size=0):
         self.__size = size
 
-    def area(self):
-        """calc & return area"""
-        return self.__size ** 2
-
     @property
     def size(self):
         return self.__size
@@ -36,6 +32,10 @@ class Square():
         elif type(value[1]) is not int or value[1] < 0:
             raise TypeError("position must be a tuple of 2 positive integers")
         self.__position = value
+
+    def area(self):
+        """calc & return area"""
+        return self.__size ** 2       
 
     def my_print(self):
         if self.__size == 0:
