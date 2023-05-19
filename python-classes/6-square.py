@@ -3,11 +3,9 @@
 
 
 class Square:
-    """Class Square that has attributes. Instantiation with size"""
-
-    def __init__(self, size=0, position=(0, 0)):
-        self.size = size
-        self.position = position
+    """this class defines squares"""
+    def __init__(self, size=0):
+        self.__size = size
 
     @property
     def size(self):
@@ -15,16 +13,15 @@ class Square:
 
     @property
     def position(self):
-        return self.__position
+        return (self.__position)
 
     @size.setter
     def size(self, value):
         if type(value) is not int:
             raise TypeError("size must be an integer")
-        elif value < 0:
+        if value < 0:
             raise ValueError("size must be >= 0")
-        else:
-            self.__size = value
+        self.__size = value
 
     @position.setter
     def position(self, value):
@@ -37,6 +34,7 @@ class Square:
         self.__position = value
 
     def area(self):
+        """calc & return area"""
         return self.__size ** 2
 
     def my_print(self):
@@ -46,9 +44,8 @@ class Square:
             for i in range(self.position[1]):
                 print()
             for i in range(self.size):
-                for j in range(self.position[0]):
+                for d in range(self.position[0]):
                     print(end=" ")
                 for k in range(self.size):
                     print("#", end="")
                 print()
-    
