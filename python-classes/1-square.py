@@ -8,3 +8,6 @@ class Square:
         """this initializes sqaures"""
         if type(size) is not int:
             raise TypeError("size can't be an integer")
+        if size < 0:
+            raise ValueError("size can't be =< 0")
+        self._size = size
