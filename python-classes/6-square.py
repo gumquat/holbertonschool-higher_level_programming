@@ -2,10 +2,12 @@
 """WHY IS MY OUTPUT INCORRECT IF I DONT HAVE THE () ON THE LINE BELOW???"""
 
 
-class Square():
-    """this class defines squares"""
-    def __init__(self, size=0):
-        self.__size = size
+class Square:
+    """Class Square that has attributes. Instantiation with size"""
+
+    def __init__(self, size=0, position=(0, 0)):
+        self.size = size
+        self.position = position
 
     @property
     def size(self):
@@ -13,15 +15,16 @@ class Square():
 
     @property
     def position(self):
-        return (self.__position)
+        return self.__position
 
     @size.setter
     def size(self, value):
         if type(value) is not int:
             raise TypeError("size must be an integer")
-        if value < 0:
+        elif value < 0:
             raise ValueError("size must be >= 0")
-        self.__size = value
+        else:
+            self.__size = value
 
     @position.setter
     def position(self, value):
@@ -34,8 +37,7 @@ class Square():
         self.__position = value
 
     def area(self):
-        """calc & return area"""
-        return self.__size ** 2       
+        return self.__size ** 2
 
     def my_print(self):
         if self.__size == 0:
@@ -44,8 +46,9 @@ class Square():
             for i in range(self.position[1]):
                 print()
             for i in range(self.size):
-                for d in range(self.position[0]):
+                for j in range(self.position[0]):
                     print(end=" ")
                 for k in range(self.size):
                     print("#", end="")
                 print()
+    
