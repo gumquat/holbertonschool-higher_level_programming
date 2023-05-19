@@ -24,11 +24,11 @@ class Square:
         self.__size = value
 
     def my_print(self):
-        """print the square with # in front"""
+        """print the square made of # symbols"""
         if(self._size <= 0):
-            print()
+            print("")
         else:
             for peepee in range(self._size):
                 for poopoo in range(self._size):
                     print("#", end='')
-            print()
+            print("")
