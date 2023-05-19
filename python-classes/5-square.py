@@ -2,7 +2,7 @@
 """SQUARE STUFF"""
 
 
-class Square:
+class Square():
     """this class defines squares"""
     def __init__(self, size=0):
         self.__size = size
@@ -24,11 +24,10 @@ class Square:
         self.__size = value
 
     def my_print(self):
-        """print the square made of # symbols"""
         if(self.__size <= 0):
-            print("")
+            print()
         else:
             for peepee in range(self.__size):
                 for poopoo in range(self.__size):
                     print("#", end='')
-            print("")
+                print()
