@@ -41,11 +41,11 @@ class Square:
         if self.__size == 0:
             print()
         else:
-            for i in range(self.position[1]):
+            for peepee in range(self.position[1]):
                 print()
-            for i in range(self.size):
-                for d in range(self.position[0]):
+            for peepee in range(self.size):
+                for poopoo in range(self.position[0]):
                     print(end=" ")
-                for k in range(self.size):
+                for peepeepoopoo in range(self.size):
                     print("#", end="")
                 print()
