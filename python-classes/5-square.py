@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""SQUARES"""
+"""SQUARE STUFF"""
 
 
 class Square:
@@ -24,6 +24,7 @@ class Square:
         self.__size = value
 
     def my_print(self):
+        """print the square with # in front"""
         if(self._size <=0 ):
             print()
         else:
