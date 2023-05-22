@@ -9,11 +9,11 @@ def add_integers(a, b=98):
     """
     Return sum of arguments
 
-    check if data passed are both type int
+    check if data passed are both type int/float
 
     arguments are typcasted as ints for the return
 
-    Raises: 
+    Raises:
         TypeError: If either argument is not type int/float
     """
     if not isinstance(a, int) and not isinstance(a, float):
