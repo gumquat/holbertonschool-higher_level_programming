@@ -4,7 +4,7 @@
 
 
 def add_integer(a, b=98):
-    """ 
+    """
     Return sum of the arguments
 
     floats are typcasted to ints for good accpetable value
