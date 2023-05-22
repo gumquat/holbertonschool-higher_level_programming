@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""booty"""
+
 
 def print_square(size):
     """
