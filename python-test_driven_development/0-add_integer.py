@@ -1,24 +1,18 @@
 #!/usr/bin/python3
-"""
-0-add_integer.py
-prints the sum of two arguments if they are ints/floats
-"""
+# 0-add_integer.py
+"""Defines an integer addition function."""
 
 
-def add_integers(a, b=98):
-    """
-    Return sum of arguments
+def add_integer(a, b=98):
+    """ Return the integer sum of a and b.
 
-    check if data passed are both type int/float
-
-    arguments are typcasted as ints for the return
+    Float arguments are typecasted to ints before addition is performed.
 
     Raises:
-        TypeError: If either argument is not type int/float
+        TypeError: If either a or b is a non-integer and non-float.
     """
     if not isinstance(a, int) and not isinstance(a, float):
         raise TypeError("a must be an integer")
     if not isinstance(b, int) and not isinstance(b, float):
         raise TypeError("b must be an integer")
-    else:
-        return int(a) + int(b)
+    return int(a) + int(b)
