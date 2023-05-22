@@ -7,7 +7,7 @@ def text_indentation(text):
     """
     prints text with new lines when . ? and :
 
-    Args: 
+    Args:
         text
 
     Raises:
