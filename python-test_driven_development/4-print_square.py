@@ -1,19 +1,15 @@
 #!/usr/bin/python3
-
+"""booty"""
 
 def print_square(size):
     """
-    4-print_square.py
     prints a square of specified size
 
     Args:
         size
 
-    Returns: nothing
-
     Raises:
         TypeError, ValueError,
-
     """
 
     if not isinstance(size, int):
