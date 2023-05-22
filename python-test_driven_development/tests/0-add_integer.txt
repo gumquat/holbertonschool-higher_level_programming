@@ -13,11 +13,11 @@
 
 'pos floats'
 >>> add_integer(1.2, 3.4)
-float(4.6)
+4
 
 'neg floats'
 >>> add_integer(-1.2, -3.4)
-float(-4.6)
+-4
 
 'one arg'
 >>> add_integer(1)
