@@ -31,13 +31,13 @@
 >>> add_integer(1, "butt")
 Traceback (most recent call last):
 ...
-TypeError: b must be an add_integer
+TypeError: b must be an integer
 
 'b int, a string'
 >>> add_integer("butt", 1)
 Traceback (most recent call last):
 ...
-TypeError: a must be an add_integer
+TypeError: a must be an integer
 
 'a & b empty'
 >>> add_integer()
