@@ -48,7 +48,7 @@ class Rectangle:
         else:
             return 0
 
-    def __printing__(self):
+    def __str__(self):
         string = ""
         if self.width > 0 and self.height > 0:
             for row in range(self.height):
