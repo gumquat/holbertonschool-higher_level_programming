@@ -63,4 +63,4 @@ class Rectangle:
             + str(self.__height) + ")"
 
     def __del__(self):
-        print("BYe rectangle...")
+        print("Bye rectangle...")
