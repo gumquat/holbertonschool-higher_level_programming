@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 # 1-rectangle.py
 """
-empty class defining rectangles
+CLASS defining rectangles
 """
 
 
@@ -16,6 +16,8 @@ class Rectangle:
 """
 PROPERTIES
 """
+
+
 @property
 def width(self):
     return self.__width
@@ -27,6 +29,8 @@ def height(self):
 """
 SETTERS
 """
+
+
 @width.setter
 def width(self, value):
     if type(value) is not int:
