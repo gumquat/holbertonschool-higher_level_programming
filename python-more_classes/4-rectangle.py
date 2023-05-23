@@ -53,11 +53,11 @@ class Rectangle:
             return '\n'.join(['#' * self.width for _ in range(self.height)])
         else:
             return ''
-        
+
     def __repr__(self):
         """
         returns a literal string with quotes for humans
         """
         return"Rectangle(" + str(self.__width)\
-        + ", "\
-        + str(self.__height) + ")"
+            + ", "\
+                + str(self.__height) + ")"
