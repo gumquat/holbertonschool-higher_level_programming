@@ -48,14 +48,14 @@ class Rectangle:
         else:
             return 0
 
-def print_self(self):
-    string = ""
-    if self.width > 0 and self.height > 0:
-        for i in range(self.height):
-            for ii in range(self.width):
-                string += '#'
-            if i < self.height - 1:
-                string += '\n'
+    def __printing__(self):
+        string = ""
+        if self.width > 0 and self.height > 0:
+            for row in range(self.height):
+                for col in range(self.width):
+                    string += '#'
+                if row < self.height - 1:
+                    string += '\n'
             return string
         else:
             return string
