@@ -32,7 +32,8 @@ print() and str() should print the rectangle with the character #:
 if width or height is equal to 0, return an empty string
 repr() should return a string representation of the rectangle to be able to recreate a new instance by using eval()
 
-## Print the message Bye rectangle... (... being 3 dots not ellipsis) when an instance of Rectangle is deleted
+## Print the message Bye rectangle... 
+(... being 3 dots not ellipsis) when an instance of Rectangle is deleted
 
 ## Static method def bigger_or_equal(rect_1, rect_2): that returns the biggest rectangle based on the area
 rect_1 must be an instance of Rectangle, otherwise raise a TypeError exception with the message rect_1 must be an instance of Rectangle
