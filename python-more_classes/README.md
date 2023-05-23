@@ -1,4 +1,4 @@
-# Write a class Rectangle that defines a rectangle by: (based on 7-rectangle.py)
+# Write a class Rectangle that defines a rectangle
 
 ## Private instance attribute: width:
 property def width(self): to retrieve it
