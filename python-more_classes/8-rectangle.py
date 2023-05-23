@@ -18,6 +18,10 @@ class Rectangle:
         self.height = height
         Rectangle.number_of_instances += 1
 
+    @classmethod
+    def square(cls, size=0):
+        return cls(size, size)
+
     @property
     def width(self):
         return self.__width
@@ -60,9 +64,11 @@ class Rectangle:
             raise TypeError("rect_1 must be an instance of Rectangle")
         if not isinstance(rect_2, Rectangle):
             raise TypeError("rect_2 must be an instance of Rectangle")
+
         if rect_1.area() >= rect_2.area():
             return rect_1
-        return rect_2
+        else:
+            return rect_2
 
     def __str__(self):
         if self.width > 0 and self.height > 0:
