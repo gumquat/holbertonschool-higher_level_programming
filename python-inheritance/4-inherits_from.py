@@ -5,7 +5,7 @@ Write a function that returns True if
     inherited (directly or indirectly) from the
     specified class ; otherwise False.
 
-Prototype: def inherits_from(obj, a_class):
+Prototype -> def inherits_from(obj, a_class):
 You are not allowed to import any module
 """
 
