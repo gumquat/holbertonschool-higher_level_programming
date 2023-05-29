@@ -8,9 +8,9 @@ class Square(Rectangle):
 
     def __init__(self, size):
         """init method"""
+        self.integer_validator("size", size)
         # super() creates a temporary instance of the obj
         super().__init__(size, size)
-        self.integer_validator("size", size)
         self.__size = size
 
     def __str__(self):
