@@ -11,6 +11,7 @@ return uhhhhh
 
 
 BaseGeometry = __import__('7-base_geometry').BaseGeometry
+# DO NOT update this to 9-base_geometry! itll fuck up the checker
 
 
 class Rectangle(BaseGeometry):
@@ -37,6 +38,7 @@ class Rectangle(BaseGeometry):
         returns visually printed rectangle via string e.g. fraction
         """
         return "[Rectangle] {}/{}".format(self.__width, self.__height)
+
 
 class Square(Rectangle):
     """
