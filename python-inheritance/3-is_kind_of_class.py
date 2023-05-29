@@ -1,4 +1,4 @@
-#!/usrbin/python3
+#!/usr/bin/python3
 """
 func that returns true if is an instance
 or if object is an instace of the class its inherited from
