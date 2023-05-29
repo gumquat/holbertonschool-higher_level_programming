@@ -12,3 +12,9 @@ class Square(Rectangle):
         super().__init__(size, size)
         self.integer_validator("size", size)
         self.__size = size
+
+    def __str__(self):
+        """
+        returns visually printed rectangle via string e.g. fraction
+        """
+        return "[Rectangle] {}/{}".format(self.__size)
