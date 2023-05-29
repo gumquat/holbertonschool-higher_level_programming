@@ -5,14 +5,11 @@ that inherited from the specified class
 
 otherwise false
 
-prototype: def inherits_from()
+prototype: def inherits_from(obj, a_class)
+no modules allowed
 """
 
 
 def inherits_From(obj, a_class):
-    """
-    returns true if obj is instance of parent class
-
-    otherwise false
-    """
+    """returns true if obj is instance of parent class, otherwise false """
     return isinstance(obj, a_class) and type(obj) is not a_class
