@@ -12,9 +12,3 @@ class Square(Rectangle):
         # super() creates a temporary instance of the obj
         super().__init__(size, size)
         self.__size = size
-
-    def __str__(self):
-        """
-        returns visual representation
-        """
-        return "[Rectangle] {}/{}".format(self.__size)
