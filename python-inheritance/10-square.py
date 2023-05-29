@@ -1,10 +1,12 @@
 #!/usr/bin/python3
 """
-instantiate with width & height
-wdth & height : private and positive integers validated
+base geometry 10 makin squaaares
+instantiate squares with width & height
+width & height : private and positive integers validated
 by integer_validator
 print() prints and str() returns specified rectangle
 AAAAHHH okay here i go
+return uhhhhh
 """
 
 
