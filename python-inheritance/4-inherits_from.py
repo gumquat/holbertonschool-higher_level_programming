@@ -1,12 +1,13 @@
 #!/usr/bin/python3
 """
-Write a function that returns True if
-    the object is an instance of a class that
-    inherited (directly or indirectly) from the
-    specified class ; otherwise False.
+func that returns True if ...
+    obj is instance of a class
+    inherited from the
+    specified class
+    otherwise False.
 
 Prototype -> def inherits_from(obj, a_class):
-You are not allowed to import any module
+no modules allowed
 """
 
 
