@@ -8,6 +8,7 @@
 >>> bg = BaseGeometry()
 >>> bg.integer_validator("my_int", 12)
 
+
 'area()'
 >>> bg = BaseGeometry()
 >>> bg.area()
