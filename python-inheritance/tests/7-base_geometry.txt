@@ -1,13 +1,12 @@
-'Test for 7-base_geometry.py'
+'Base Geometry Test'
 
-'Func testing -> integer_validator()'
+'Testing: integer_validator()'
 
 >>> BaseGeometry = __import__("7-base_geometry").BaseGeometry
 
 'string & int'
 >>> bg = BaseGeometry()
 >>> bg.integer_validator("my_int", 12)
-
 
 'area()'
 >>> bg = BaseGeometry()
