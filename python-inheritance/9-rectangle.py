@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 """
 instantiate with width & height
-wdth & height : private and positive integers validated 
+wdth & height : private and positive integers validated
 by integer_validator
 print() prints and str() returns specified rectangle
 AAAAHHH okay here i go
