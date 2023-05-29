@@ -1,4 +1,4 @@
-#!/usrbin/python3
+#!/usr/bin/python3
 """
 make a class MyList that inherits from list
 """
