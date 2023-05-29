@@ -15,7 +15,7 @@ class Rectangle(BaseGeometry):
     """
     Defines Rectangle Class
     """
-    def __init__(self, width, hight):
+    def __init__(self, width, height):
         """
         init method
         """
