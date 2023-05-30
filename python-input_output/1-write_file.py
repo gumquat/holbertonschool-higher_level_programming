@@ -11,6 +11,6 @@ def write_file(filename="", text=""):
     with open(filename, mode="w", encoding="utf-8") as file:
         counter = 0
         for element in text:
-            counter += 1        
+            counter += 1
         file.write(text)
         return counter
