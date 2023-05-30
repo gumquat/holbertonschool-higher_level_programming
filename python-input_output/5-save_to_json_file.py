@@ -1,8 +1,8 @@
 #!/usr/bin/python3
-"""func that writes an obj to a text file using json represenstation
+"""
 func that writes an obj to a text file using json represenstation
-func that writes an obj to a text file using json represenstation
-func that writes an obj to a text file using json represenstation"""
+
+"""
 import json
 
 
