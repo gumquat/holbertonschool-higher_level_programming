@@ -9,6 +9,8 @@ def write_file(filename="", text=""):
     write stuff
     """
     with open(filename, mode="w", encoding="utf-8") as file:
-        counter += 1
-        # return file.write(text)
+        counter = 0
+        for element in text:
+            counter += 1        
+        file.write(text)
         return counter
