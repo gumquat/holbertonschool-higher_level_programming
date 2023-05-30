@@ -15,5 +15,5 @@ def class_to_json(obj):
     for attr, value in attributes.items():
         if isinstance(value, (list, dict, str, int, bool)):
             data[attr] = value
-    
+
     return data
