@@ -2,8 +2,6 @@
 """
 func that writes an pbj to a text file using json represenstation
 """
-
-
 import json
 
 
