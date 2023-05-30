@@ -1,4 +1,11 @@
 #!/usr/bin/python3
+"""
+11-student.py
+class student w/ public instance attributes as before
+json stuff included
+"""
+
+
 class Student:
     """
     student class def.
