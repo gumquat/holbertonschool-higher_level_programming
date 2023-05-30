@@ -21,4 +21,5 @@ class Student:
             return {
                 attr: getattr(self, attr)
                 for attr in attrs
-                    if hasattr(self, attr)}
+                if hasattr(self, attr)
+                }
