@@ -10,7 +10,6 @@ def append_write(filename="", text=""):
     append file with new line of text
     """
 
-
     with open(filename, mode="a", encoding='utf-8') as append:
         counter = 0
         for element in text:
