@@ -1,7 +1,9 @@
 #!/usr/bin/python3
 """
 func that writes an obj to a text file using json represenstation
-
+Prototype: ...
+Def: ...
+Return: ...
 """
 import json
 
