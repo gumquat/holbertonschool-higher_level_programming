@@ -32,4 +32,3 @@ class TestBase(unittest.TestCase):
         """TEST: saving the ID passed exists"""
         b1 = Base(89)
         self.assertEqual(b1.id, 89)
-        
