@@ -1,15 +1,16 @@
 #!/usr/bin/python3
-""" Base Class Test Cases"""
+""" Class Test Cases"""
 import unittest
+
 from models.base import Base
-# from models.rectangle import Rectangle as Rectangle
+from models.rectangle import Rectangle as Rectangle
 # from models.square import Square as Square
 
 
 class TestBase(unittest.TestCase):
     """makes some bass class ez ref for testing"""
     b = Base()
-    r = # Rectangle()
+    r = Rectangle()
     s = # Square()
 
     """BASE CLASS TESTING"""
