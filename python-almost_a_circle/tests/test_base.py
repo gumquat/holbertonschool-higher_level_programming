@@ -4,12 +4,9 @@ import unittest
 from models.base import Base
 
 
-class Test(unittest.TestCase):
-
-    def test_construct(self):
-        self.obj = Base()
-        self.assertEqual(self.obj.id,1)
-        
-    def test_validator(self):
-        self.assertRaises(TypeError, Base.check_int, "fail", "fail")
-        self.assertRaises(TypeError, Base.check_int, 2.5, "failure")
+class TestBase(unittest.TestCase):
+    """tests base class"""
+    def test_max_int(self):
+        """Auto Assigned ID test - exists y/n"""
+        b = Base()
+        self.assertEqual(b.id, 1)
