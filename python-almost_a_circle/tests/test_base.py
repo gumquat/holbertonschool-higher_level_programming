@@ -8,10 +8,10 @@ from models.rectangle import Rectangle as Rectangle
 
 
 class TestBase(unittest.TestCase):
-    """makes some bass class ez ref for testing"""
+    """makes some base class ez ref for testing"""
     b = Base()
     r = Rectangle()
-    s = # Square()
+    # s = Square()
 
     """BASE CLASS TESTING"""
     def test_Auto_ID(self):
@@ -22,7 +22,7 @@ class TestBase(unittest.TestCase):
         self.assertIsNotNone(b2.id)
         self.assertNotEqual(b1.id, b2.id)
     def Auto_ID_Incrementing(self):
-        """TEST: IDs are incrementing upon new base creation"""
+        """TEST: IDs are incrementing upon new instance creation"""
         b1 = Base()
         b2 = Base()
         b3 = Base()
