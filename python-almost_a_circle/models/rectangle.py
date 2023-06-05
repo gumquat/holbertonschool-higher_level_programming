@@ -69,16 +69,15 @@ class Rectangle(Base):
         """func overwrites __str___ of base"""
         return ("[Rectangle] ({}) {}/{} - {}/{}".format(self.id,
                 self.x, self.y, self.width, self.height))
-    
+
     def update(self, *args, **kwargs):
         """assigns args to attributes"""
         if args:
             atts = ['id', 'width', 'height', 'x', 'y']
             for idx in enumerate(args):
-                setattr(self, atts[idx], args)
+                setattr(self, atts[idx], arg)
         for key, value in kwargs.items():
             setattr(self, key, value)
-
 
     """HEIGHT & WIDTH VALIDATOR"""
     def HW_validator(self, name, value):
