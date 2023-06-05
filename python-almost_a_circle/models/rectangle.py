@@ -21,8 +21,11 @@ class Rectangle(Base):
 
     @width.setter
     def width(self, value):
-        """validate and set width"""
-        self.__width = self.HW_validator("width", value)
+        if type(value) is not int:
+            raise TypeError("width must be an integer")
+        if value <= 0:
+            raise ValueError("width must be > 0")
+        self.__width = value
 
     @property
     def height(self):
@@ -31,8 +34,11 @@ class Rectangle(Base):
 
     @height.setter
     def height(self, value):
-        """validate and set height"""
-        self.__height = self.HW_validator("height", value)
+        if type(value) is not int:
+            raise TypeError("height must be an integer")
+        if value <= 0:
+            raise ValueError("height must be > 0")
+        self.__height = value
 
     @property
     def x(self):
@@ -42,7 +48,11 @@ class Rectangle(Base):
     @x.setter
     def x(self, value):
         """validate and set x"""
-        self.__x = self.XY_validator("x", value)
+        if type(value) is not int:
+            raise TypeError("x must be an integer")
+        if value < 0:
+            raise ValueError("x must be >= 0")
+        self.__x = value
 
     @property
     def y(self):
@@ -51,8 +61,12 @@ class Rectangle(Base):
 
     @y.setter
     def y(self, value):
-        """validate and set y"""
-        self.__y = self.XY_validator("y", value)
+    """validate and set y"""
+        if type(value) is not int:
+            raise TypeError("y must be an integer")
+        if value < 0:
+            raise ValueError("y must be >= 0")
+        self.__y = value
 
     def area(self):
         """init area"""
@@ -80,30 +94,12 @@ class Rectangle(Base):
             for key, value in kwargs.items():
                 setattr(self, key, value)
 
-    """HEIGHT & WIDTH VALIDATOR"""
-    def HW_validator(self, name, value):
-        """
-        Raises Errors if...
-        1.) TypeError if Value =/= int
-        2.) ValueError if Value <=0
-        """
-        if type(value) is not int:
-            raise TypeError("{} must be an integer".format(name))
-        if value < 1:
-            raise ValueError("{} must be > 0".format(name))
-        return (value)
-
-    """X & Y VALIDATOR"""
-    def XY_validator(self, name, value):
-        """
-        Raises Errors if...
-        1.) TypeError if Value =/= int
-        2.) ValueError if Value <=0
-        """
-        if type(value) is not int:
-            raise TypeError("{} must be an integer".format(name))
-        if value < 1:
-            raise ValueError("{} must be >= 0".format(name))
-        if value > 0:
-            raise ValueError("{} must be >= 0".format(name))
-        return (value)
+    def to_dictionary(self):
+    """returns rectangle in dict format"""
+    return {
+        'id': self.id,
+        'width': self.width,
+        'height': self.height,
+        'x': self.x,
+        'y': self.y
+        }
