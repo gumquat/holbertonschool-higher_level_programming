@@ -9,10 +9,10 @@ class Rectangle(Base):
     """rectangle class"""
     def __init__(self, width, height, x=0, y=0, id=None):
         super().__init__(id)
-        self.__width = width
-        self.__height = height
-        self.__x = x
-        self.__y = y
+        self.width = width
+        self.height = height
+        self.x = x
+        self.y = y
 
     @property
     def width(self):
@@ -69,6 +69,16 @@ class Rectangle(Base):
         """func overwrites __str___ of base"""
         return ("[Rectangle] ({}) {}/{} - {}/{}".format(self.id,
                 self.x, self.y, self.width, self.height))
+    
+    def update(self, *args, **kwargs):
+        """assigns args to attributes"""
+        if args:
+            atts = ['id', 'width', 'height', 'x', 'y']
+            for idx in enumerate(args):
+                setattr(self, atts[idx], args)
+        for key, value in kwargs.items():
+            setattr(self, key, value)
+
 
     """HEIGHT & WIDTH VALIDATOR"""
     def HW_validator(self, name, value):
