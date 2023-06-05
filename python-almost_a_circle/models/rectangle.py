@@ -72,12 +72,13 @@ class Rectangle(Base):
 
     def update(self, *args, **kwargs):
         """assigns args to attributes"""
-        if args:
-            atts = ['id', 'width', 'height', 'x', 'y']
-            for i, arg in enumerate(args):
-                setattr(self, atts[i], arg)
-        for key, value in kwargs.items():
-            setattr(self, key, value)
+        if args is not None:
+            attr = ['id', 'width', 'height', 'x', 'y']
+            for i, a in enumerate(args):
+                setattr(self, attr[i], a)
+        if kwargs is not None:
+            for key, value in kwargs.items():
+                setattr(self, key, value)
 
     """HEIGHT & WIDTH VALIDATOR"""
     def HW_validator(self, name, value):
