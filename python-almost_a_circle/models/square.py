@@ -1,12 +1,12 @@
 #!/usr/bin/python3
 """
-This is for a square. and not a circle
+Square. Square. Square.
 """
 from models.rectangle import Rectangle
 
 
 class Square(Rectangle):
-    """This is a square"""
+    """square class"""
     def __init__(self, size, x=0, y=0, id=None):
         super().__init__(size, size, x, y, id)
 
@@ -19,12 +19,17 @@ class Square(Rectangle):
         self.width = value
         self.height = value
 
+    """
+    DEFS THAT DO STUFF
+    ------------------
+    """
+
     def __str__(self):
         return ("[Square] ({}) {}/{} - {}"
                 .format(self.id, self.x, self.y, self.width or self.height))
 
     def update(self, *args, **kwargs):
-        """i dunno. Documentaion or something"""
+        """update func"""
         if args and len(args) > 0:
             attributes = ['id', 'size', "x", "y"]
             for index, arg in enumerate(args):
