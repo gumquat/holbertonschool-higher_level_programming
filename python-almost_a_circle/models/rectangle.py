@@ -54,12 +54,10 @@ class Rectangle(Base):
         """validate and set y"""
         self.__y = self.XY_validator("y", value)
 
-    @property
     def area(self):
         """init area"""
         return self.__width * self.__height
 
-    @property
     def display(self):
         """prints out a string representation of the rectangle"""
         for i in range(self.y):
