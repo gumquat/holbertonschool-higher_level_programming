@@ -63,7 +63,7 @@ class Rectangle(Base):
         for i in range(self.y):
             print()
         for a in range(self.height):
-            print
+            print("{}{}".format(" " * self.x, "#" * self.width))
 
     """HEIGHT & WIDTH VALIDATOR"""
     def HW_validator(self, name, value):
