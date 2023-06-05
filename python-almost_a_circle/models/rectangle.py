@@ -22,8 +22,7 @@ class Rectangle(Base):
     @width.setter
     def width(self, value):
         """validate and set width"""
-        #__
-        self.width = self.HW_validator("width", value)
+        self.__width = self.HW_validator("width", value)
 
     @property
     def height(self):
@@ -33,8 +32,7 @@ class Rectangle(Base):
     @height.setter
     def height(self, value):
         """validate and set height"""
-        #__
-        self.height = self.HW_validator("height", value)
+        self.__height = self.HW_validator("height", value)
 
     @property
     def x(self):
@@ -44,8 +42,7 @@ class Rectangle(Base):
     @x.setter
     def x(self, value):
         """validate and set x"""
-        #__
-        self.x = self.XY_validator("x", value)
+        self.__x = self.XY_validator("x", value)
 
     @property
     def y(self):
@@ -55,13 +52,11 @@ class Rectangle(Base):
     @y.setter
     def y(self, value):
         """validate and set y"""
-        #__
-        self.y = self.XY_validator("y", value)
+        self.__y = self.XY_validator("y", value)
 
     def area(self):
         """init area"""
-        #__
-        return self.width * self.height
+        return self.__width * self.__height
 
     def display(self):
         """prints out a string representation of the rectangle"""
