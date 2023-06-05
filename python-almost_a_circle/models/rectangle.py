@@ -1,12 +1,13 @@
 #!/usr/bin/python3
-"""rectangle class"""
-
-
+"""
+Rectangle. Rectangle. Rectangle.
+"""
 from models.base import Base
 
 
 class Rectangle(Base):
     """rectangle class"""
+
     def __init__(self, width, height, x=0, y=0, id=None):
         super().__init__(id)
         self.width = width
@@ -14,10 +15,35 @@ class Rectangle(Base):
         self.x = x
         self.y = y
 
+    """
+    PROPERTIES
+    """
     @property
     def width(self):
-        """get width"""
         return self.__width
+
+    @property
+    def height(self):
+        return self.__height
+
+    @property
+    def x(self):
+        return self.__x
+
+    @property
+    def y(self):
+        return self.__y
+
+    """
+    SETTERS
+    """
+    @height.setter
+    def height(self, value):
+        if type(value) is not int:
+            raise TypeError("height must be an integer")
+        if value <= 0:
+            raise ValueError("height must be > 0")
+        self.__height = value
 
     @width.setter
     def width(self, value):
@@ -27,79 +53,58 @@ class Rectangle(Base):
             raise ValueError("width must be > 0")
         self.__width = value
 
-    @property
-    def height(self):
-        """get height"""
-        return self.__height
-
-    @height.setter
-    def height(self, value):
-        if type(value) is not int:
-            raise TypeError("height must be an integer")
-        if value <= 0:
-            raise ValueError("height must be > 0")
-        self.__height = value
-
-    @property
-    def x(self):
-        """get x"""
-        return self.__x
-
     @x.setter
     def x(self, value):
-        """validate and set x"""
         if type(value) is not int:
             raise TypeError("x must be an integer")
         if value < 0:
             raise ValueError("x must be >= 0")
         self.__x = value
 
-    @property
-    def y(self):
-        """get y"""
-        return self.__y
-
     @y.setter
     def y(self, value):
-    """validate and set y"""
         if type(value) is not int:
             raise TypeError("y must be an integer")
         if value < 0:
             raise ValueError("y must be >= 0")
         self.__y = value
 
+    """
+    DEFS
+    """
     def area(self):
-        """init area"""
-        return self.__width * self.__height
+        """Area function for rectangle"""
+        return(self.__height * self.__width)
 
     def display(self):
-        """prints out a string representation of the rectangle"""
-        for i in range(self.y):
+        """Function to display the rectangle"""
+        print("\n" * self.y, end='')
+        for row in range(self.height):
+            print(" " * self.x, end='')
+            for col in range(self.width):
+                print("#", end='')
             print()
-        for a in range(self.height):
-            print("{}{}".format(" " * self.x, "#" * self.width))
 
     def __str__(self):
-        """func overwrites __str___ of base"""
-        return ("[Rectangle] ({}) {}/{} - {}/{}".format(self.id,
-                self.x, self.y, self.width, self.height))
+        return ("[Rectangle] ({}) {}/{} - {}/{}"
+                .format(self.id, self.x, self.y, self.width, self.height))
 
     def update(self, *args, **kwargs):
-        """assigns args to attributes"""
-        if args is not None:
+        """update self"""
+        if args:
             attr = ['id', 'width', 'height', 'x', 'y']
-            for i, a in enumerate(args):
-                setattr(self, attr[i], a)
-        if kwargs is not None:
-            for key, value in kwargs.items():
-                setattr(self, key, value)
+            for i, arg in enumerate(args):
+                setattr(self, attr[i], arg)
+        for key, value in kwargs.items():
+            setattr(self, key, value)
 
     def to_dictionary(self):
-    """returns rectangle in dict format"""
-    return {
-        'id': self.id,
-        'width': self.width,
-        'height': self.height,
-        'x': self.x,
-        'y': self.y
+        """returns rect in dict format"""
+        return {
+            'id': self.id,
+            'width': self.width,
+            'height': self.height,
+            'x': self.x,
+            'y': self.y
         }
+    
