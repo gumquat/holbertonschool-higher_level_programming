@@ -5,9 +5,6 @@ from models.base import Base
 from unittest.mock import patch
 from io import StringIO
 
-if __name__ == '__main__':
-    unittest.main()
-
 class TestBase(unittest.TestCase):
     """TEST: BASE CLASS TESTS"""
     def test_Auto_ID(self):
@@ -42,3 +39,7 @@ class TestBase(unittest.TestCase):
         with self.assertRaises(TypeError):
             b = Base()
             json_dictionary = Base.to_json_string()
+
+"""NEEDS this to be run"""
+if __name__ == '__main__':
+    unittest.main()
