@@ -1,2 +1,3 @@
 -- Comment
-SELECT COLUMN_NAME, COLUMN_TYPE FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_SCHEMA='$database' AND TABLE_NAME='first_table';
+-- This is a comment
+SHOW CREATE TABLE first_table;
