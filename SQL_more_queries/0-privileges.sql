@@ -1,3 +1,3 @@
 -- Comment
-SELECT * FROM INFORMATION_SCHEMA.USER_PRIVILEGES WHERE GRANTEE = "'user_0d_1'@'localhost'";
-SELECT * FROM INFORMATION_SCHEMA.USER_PRIVILEGES WHERE GRANTEE = "'user_0d_2'@'localhost'";
+SELECT GRANTS FOR 'user_0d_1'@'localhost';
+SELECT GRANTS FOR 'user_0d_2'@'localhost';
