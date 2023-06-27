@@ -7,9 +7,11 @@ import sys
 
 
 def select_states(username, password, database):
-    """Connect to MySQL server"""
-    db = MySQLdb.connect(host="localhost",
-                        port=3306, user=username, password=password, db=database)
+    """
+    Connect to MySQL server
+    REMEMBER! the username, password, and db are passed as arguments!
+    """
+    db = MySQLdb.connect(host="localhost", port=3306, username = sys.argv[1], password=sys.argv[2], db=sys.argv[3])
 
     """Create a cursor object to execute SQL queries"""
     cursor = db.cursor()
@@ -27,14 +29,6 @@ def select_states(username, password, database):
     """Close the cursor and database connection"""
     cursor.close()
     db.close()
-
-
-"""Provide the MySQL username, password, and database name
-username = "your_username"
-password = "your_password"
-database = "hbtn_0e_0_usa"
-"""
-
 
 if __name__ == "__main__":
     select_states()
