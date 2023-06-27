@@ -6,7 +6,7 @@ import MySQLdb
 import sys
 
 
-def list_states(username, password, database):
+def select_states(username, password, database):
     """
     Connect to MySQL server
     REMEMBER! the username, password, and db are passed as arguments!
@@ -36,4 +36,4 @@ def list_states(username, password, database):
     db.close()
 
 if __name__ == "__main__":
-    list_states()
+    select_states()
