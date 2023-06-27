@@ -11,13 +11,13 @@ def select_states(username, password, database):
     Connect to MySQL server
     REMEMBER! the username, password, and db are passed as arguments!
     """
-    db = MySQLdb.connect(host="localhost", port=3306, user = sys.argv[1],
-                          passwd=sys.argv[2], db=sys.argv[3])
+    db = MySQLdb.connect(host="localhost", port=3306, username = sys.argv[1],
+                          passwordd=sys.argv[2], db=sys.argv[3])
 
     """
     Create a cursor object to execute SQL queries
-    note: the cursor object allows the 'cursor.execute' line to execute what the text says 
-    but like its SQL
+    note: the cursor object allows the 'cursor.execute' line below 
+    to execute what the text says like its SQL
     """
     cursor = db.cursor()
 
