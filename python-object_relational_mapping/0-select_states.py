@@ -1,31 +1,35 @@
 #!/usr/bin/python3
 import MySQLdb
+"""
+script that lists all states from the database hbtn_0e_0_usa
+"""
+
 
 def list_states(username, password, database):
-    # Connect to MySQL server
+    """Connect to MySQL server"""
     db = MySQLdb.connect(host="localhost", port=3306, user=username, passwd=password, db=database)
 
-    # Create a cursor object to execute SQL queries
+    """Create a cursor object to execute SQL queries"""
     cursor = db.cursor()
 
-    # Execute the query to fetch all states
+    """Execute the query to fetch all states"""
     cursor.execute("SELECT * FROM states ORDER BY id ASC")
 
-    # Fetch all the rows returned by the query
+    """Fetch all the rows returned by the query"""
     rows = cursor.fetchall()
 
-    # Display the results
+    """Display the results"""
     for row in rows:
         print(row)
 
-    # Close the cursor and database connection
+    """Close the cursor and database connection"""
     cursor.close()
     db.close()
 
-# Provide the MySQL username, password, and database name
+"""Provide the MySQL username, password, and database name"""
 username = "your_username"
 password = "your_password"
 database = "hbtn_0e_0_usa"
 
-# Call the function to list the states
+"""Call the function to list the states"""
 list_states(username, password, database)
