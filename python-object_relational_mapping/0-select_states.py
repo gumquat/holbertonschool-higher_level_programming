@@ -6,14 +6,19 @@ import MySQLdb
 import sys
 
 
-def select_states(username, password, database):
+def list_states(username, password, database):
     """
     Connect to MySQL server
     REMEMBER! the username, password, and db are passed as arguments!
     """
-    db = MySQLdb.connect(host="localhost", port=3306, username = sys.argv[1], password=sys.argv[2], db=sys.argv[3])
+    db = MySQLdb.connect(host="localhost", port=3306, username = sys.argv[1],
+                          password=sys.argv[2], db=sys.argv[3])
 
-    """Create a cursor object to execute SQL queries"""
+    """
+    Create a cursor object to execute SQL queries
+    note: the cursor object allows the 'cursor.execute' line to execute what the text says 
+    but like its SQL
+    """
     cursor = db.cursor()
 
     """Execute the query to fetch all states"""
@@ -31,4 +36,4 @@ def select_states(username, password, database):
     db.close()
 
 if __name__ == "__main__":
-    select_states()
+    list_states()
