@@ -2,6 +2,9 @@
 import MySQLdb
 """
 script that lists all states from the database hbtn_0e_0_usa
+script that lists all states from the database hbtn_0e_0_usa
+script that lists all states from the database hbtn_0e_0_usa
+script that lists all states from the database hbtn_0e_0_usa
 """
 
 
