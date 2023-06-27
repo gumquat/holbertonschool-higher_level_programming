@@ -21,7 +21,7 @@ def select_states(username, password, database):
     """
     cursor = db.cursor()
 
-    """Execute the query to fetch all states"""
+    """Execute a query to fetch all states"""
     cursor.execute("SELECT * FROM states ORDER BY id ASC")
 
     """Fetch all the rows returned by the query"""
