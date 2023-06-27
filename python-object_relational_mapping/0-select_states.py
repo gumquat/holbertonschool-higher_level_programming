@@ -1,8 +1,10 @@
 #!/usr/bin/python3
-import MySQLdb
 """
 script that lists all states from the database hbtn_0e_0_usa
 """
+import MySQLdb
+import sys
+
 
 
 def list_states(username, password, database):
@@ -31,5 +33,5 @@ username = "your_username"
 password = "your_password"
 database = "hbtn_0e_0_usa"
 
-"""Call the function to list the states"""
-list_states(username, password, database)
+if __name__ == "__main__":
+    list_states()
