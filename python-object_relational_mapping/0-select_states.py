@@ -28,10 +28,11 @@ def select_states(username, password, database):
     cursor.close()
     db.close()
 
-"""Provide the MySQL username, password, and database name"""
+"""Provide the MySQL username, password, and database name
 username = "your_username"
 password = "your_password"
 database = "hbtn_0e_0_usa"
+"""
 
 if __name__ == "__main__":
     select_states()
