@@ -13,7 +13,7 @@ def N_states():
 
     cursor = db.cursor()
 
-    cursor.execute("SELECT * FROM states WHERE NAME LIKE 'N%' ORDER BY id")
+    cursor.execute("SELECT * FROM states WHERE BINARY NAME LIKE 'N%' ORDER BY id")
 
     rows = cursor.fetchall()
 
