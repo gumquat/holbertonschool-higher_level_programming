@@ -14,7 +14,9 @@ def N_states():
     cur = db.cursor()
 
     cur.execute("SELECT * FROM states WHERE NAME LIKE 'N%' ORDER BY id")
+
     rows = cur.fetchall()
+
     for row in rows:
         print(row)
 
