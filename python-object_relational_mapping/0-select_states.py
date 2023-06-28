@@ -19,13 +19,13 @@ def list_states():
     note: the cursor object allows the 'cursor.execute' line below 
     to execute what the text says like its SQL
     """
-    cursor = db.cursor()
+    cursor=db.cursor()
 
     """Execute a query to fetch all states"""
     cursor.execute("SELECT * FROM states ORDER BY id ASC")
 
     """Fetch all the rows returned by the query"""
-    rows = cursor.fetchall()
+    rows=cursor.fetchall()
 
     """Display the results"""
     for row in rows:
