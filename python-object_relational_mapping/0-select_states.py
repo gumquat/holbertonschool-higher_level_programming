@@ -7,36 +7,36 @@ import sys
 
 
 def list_states():
-	"""
-	Connect to MySQL server
-	REMEMBER! the username, password, and db are passed as arguments!
-	"""
-	db = MySQLdb.connect(host="localhost", port=3306, user=sys.argv[1],
-						  passwd = sys.argv[2], db = sys.argv[3])
+    """
+    Connect to MySQL server
+    REMEMBER! the username, password, and db are passed as arguments!
+    """
+    db = MySQLdb.connect(host="localhost", port=3306, user=sys.argv[1],
+                          passwd = sys.argv[2], db = sys.argv[3])
 
-	"""
-	Create a cursor object to execute SQL queries
-	note: the cursor object allows the 'cursor.execute' line below
-	to execute what the text says like its SQL
-	"""
-	cursor = db.cursor()
+    """
+    Create a cursor object to execute SQL queries
+    note: the cursor object allows the 'cursor.execute' line below
+    to execute what the text says like its SQL
+    """
+    cursor = db.cursor()
 
-	"""Execute a query to fetch all states"""
-	cursor.execute("SELECT * FROM states ORDER BY id ASC")
+    """Execute a query to fetch all states"""
+    cursor.execute("SELECT * FROM states ORDER BY id ASC")
 
-	"""Fetch all the rows returned by the query"""
-	rows = cursor.fetchall()
+    """Fetch all the rows returned by the query"""
+    rows = cursor.fetchall()
 
-	"""Display the results"""
-	for row in rows:
-		print(row)
+    """Display the results"""
+    for row in rows:
+        print(row)
 
-	"""
-	Close the cursor and database connection
-	THIS IS GOOD PRACTICE
-	"""
-	cursor.close()
-	db.close()
+    """
+    Close the cursor and database connection
+    THIS IS GOOD PRACTICE
+    """
+    cursor.close()
+    db.close()
 
 if __name__ == "__main__":
-	list_states()
+    list_states()
