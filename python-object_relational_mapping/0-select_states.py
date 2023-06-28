@@ -12,7 +12,7 @@ def list_states():
     REMEMBER! the username, password, and db are passed as arguments!
     """
     db = MySQLdb.connect(host="localhost", port=3306, user=sys.argv[1],
-                            passwd=sys.argv[2], db=sys.argv[3])
+    passwd=sys.argv[2], db=sys.argv[3])
 
     """
     Create a cursor object to execute SQL queries
@@ -38,6 +38,6 @@ def list_states():
     cursor.close()
     db.close()
 
+
 if __name__ == "__main__":
     list_states()
-
