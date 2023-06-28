@@ -21,6 +21,5 @@ def N_states():
     cur.close()
     db.close()
 
-
     if __name__ == "__main__":
         N_states()
