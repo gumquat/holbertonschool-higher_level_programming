@@ -24,5 +24,5 @@ def N_states():
     db.close()
 
 
-    if __name__ == "__main__":
-        N_states()
+if __name__ == "__main__":
+    N_states()

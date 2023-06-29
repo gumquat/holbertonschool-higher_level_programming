@@ -24,5 +24,5 @@ def list_states_by_name():
     db.close()
 
 
-    if __name__ == "__main__":
-        list_states_by_name()
+if __name__ == "__main__":
+    list_states_by_name()
