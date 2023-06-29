@@ -18,7 +18,7 @@ def list_cities_by_state():
                 JOIN STATES ON states.id = cities.state_id\
                 WHERE states.name = %s ORDER BY cities.id"
 
-    cursor.execute(buffer_string, (sys.argv[4],))
+    cursor.execute(buffer_string, (sys.argv[4]))
 
     rows = cursor.fetchall()
 
