@@ -14,7 +14,15 @@ from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy import create_engine
 import sys
 
+"""
+import all classes who inherit from base before calling Base.metadata.create_all(engine)??
+"""
 Base = declarative_base()
+
+from model_state import Base, State
+engine = create_engine(f'mysql://{sys.argv[1]}:{sys.argv[2]}@localhost:3306/{sys.argv[3]}', pool_pre_ping=True)
+
+Base.metadata.create_all(engine)
 
 class State(Base):
     __tablename__ = 'states'
@@ -22,6 +30,4 @@ class State(Base):
     id = Column(Integer, primary_key=True, autoincrement=True, nullable=False)
     name = Column(String(128), nullable=False)
 
-    engine = create_engine(f'mysql://{sys.argv[1]}:{sys.argv[2]}@localhost:3306/{sys.argv[3]}', pool_pre_ping=True)
 
-    Base.metadata.create_all(engine)
