@@ -28,10 +28,10 @@ def list_cities_by_state():
     if len(rows) == 0:
         print()
         return
-    else:
-        for i in range(len(rows) - 1):
-            print(rows[i][0], end=', ')
-        print(rows[len(rows) - 1][0])
+
+    for i in range(len(rows) - 1):
+        print(rows[i][0], end=', ')
+    print(rows[len(rows) - 1][0])
 
     cursor.close()
     db.close()
