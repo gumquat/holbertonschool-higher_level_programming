@@ -13,7 +13,7 @@ def list_states_by_name_again():
 
     cursor = db.cursor()
 
-    buffer_string = "SELECT * FROM states WHERE name =%s ORDER BY id"
+    buffer_string = "SELECT * FROM states WHERE name = %s ORDER BY id"
     cursor.execute(buffer_string, (sys.argv[4]))
 
     rows = cursor.fetchall()
