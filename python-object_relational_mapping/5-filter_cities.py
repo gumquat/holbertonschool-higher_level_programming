@@ -14,8 +14,7 @@ def list_cities_by_state():
 
     cursor = db.cursor()
 
-    buffer_string = "SELECT cities.name FROM cities\
-                JOIN STATES ON states.id = cities.state_id\
+    buffer_string = "SELECT cities.name FROM cities JOIN STATES ON states.id = cities.state_id\
                 WHERE states.name = %s ORDER BY cities.id ASC"
 
     cursor.execute(buffer_string, (sys.argv[4],))
