@@ -14,11 +14,11 @@ def list_cities_by_state():
 
     cursor = db.cursor()
 
-    sql_com = "SELECT cities.name FROM cities JOIN states\
-                ON states.id = cities.state_id WHERE states.name\
-                = %s ORDER BY cities.id"
+    buffer_string = "SELECT cities.name FROM cities\
+                JOIN STATES ON states.id = cities.state_id\
+                WHERE states.name = %s ORDER BY cities.id"
 
-    cursor.execute(sql_com, (sys.argv[4],))
+    cursor.execute(buffer_string, (sys.argv[4],))
 
     rows = cursor.fetchall()
 
