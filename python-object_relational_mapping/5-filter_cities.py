@@ -16,19 +16,22 @@ def list_cities_by_state():
 
     buffer_string = "SELECT cities.name FROM cities\
                 JOIN STATES ON states.id = cities.state_id\
-                WHERE states.name = %s ORDER BY cities.id"
+                WHERE states.name = %s ORDER BY cities.id ASC"
 
-    cursor.execute(buffer_string, (sys.argv[4]))
+    cursor.execute(buffer_string, (sys.argv[4],))
 
     rows = cursor.fetchall()
 
+    """
+    HAHA I LOVE PRINTING!!!!!!!!
+    """
     if len(rows) == 0:
         print()
         return
-
-    for i in range(len(rows) - 1):
-        print(rows[i][0], end=', ')
-    print(rows[len(rows) - 1][0])
+    else:
+        for i in range(len(rows) - 1):
+            print(rows[i][0], end=', ')
+        print(rows[len(rows) - 1][0])
 
     cursor.close()
     db.close()
