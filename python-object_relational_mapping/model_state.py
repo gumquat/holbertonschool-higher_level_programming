@@ -1,12 +1,18 @@
-#!/usr/bin/python3
 """
-link class to database 
+python file: contains a class definition of state and an instance of Base = declarative_base
 """
-from model_state import Base, State
-import sys
+from sqlalchemy import Column, Integer, String
+from sqlalchemy.ext.declarative import declarative_base
+from sqlalchemy import create_engine
 
-from sqlalchemy import (create_engine)
+Base = declarative_base()
 
-if __name__ == "__main__":
-    engine = create_engine('mysql+mysqldb://{}:{}@localhost/{}'.format(sys.argv[1], sys.argv[2], sys.argv[3]), pool_pre_ping=True)
+class State(Base):
+    __tablename__ = 'states'
+    
+    id = Column(Integer, primary_key=True, autoincrement=True, nullable=False)
+    name = Column(String(128), nullable=False)
+
+    engine = create_engine('mysql+mysqldb://root:root@localhost/hbtn_03_5_usa')
+    
     Base.metadata.create_all(engine)
