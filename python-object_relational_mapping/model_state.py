@@ -1,7 +1,5 @@
 #!/usr/bin/python3
-"""
-python file: contains a class definition of state and an instance of Base = declarative_base
-"""
+"""python file: contains a class definition of state and an instance of Base = declarative_base"""
 from sqlalchemy import Column, Integer, String
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy import create_engine
