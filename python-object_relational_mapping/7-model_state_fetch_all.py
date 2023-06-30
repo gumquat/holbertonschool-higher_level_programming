@@ -1,5 +1,7 @@
 #!/usr/bin/python3
-"""script that lists all state objs from database hbtn_0e_6_usa"""
+"""
+script that lists all state objs from database hbtn_0e_6_usa
+"""
 import sys
 from model_state import Base, State
 from sqlalchemy import (create_engine)
