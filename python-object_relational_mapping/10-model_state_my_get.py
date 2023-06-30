@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """
-script that lists all state objs containing the letter 'a' from database hbtn_0e_6_usa
+script that prints the state obj w the name passed as 
+arg from database hbtn_0e_6_usa
 """
 import sys
 from model_state import Base, State
@@ -14,12 +15,14 @@ if __name__ == "__main__":
     
     Base.metadata.create_all(engine)
 
-    """LINE LIMITS ARE FUN"""
+    """I LOVE LINE LIMITS"""
     S = sessionmaker(bind=engine)
     s = S()
 
-    states = s.query(State).filter(State.name.LIKE('%a%'))\
-                                 .order_by(State.id).all()
+    state_name = sys.argv[4]
+    state = s.query(State).filter(State.name == state_name).first()
 
-    for state in states:
-        print(f"{state.id}: {state.name}")
+    if state is None:
+        print("Not found")
+    else:
+        print(state.id)
