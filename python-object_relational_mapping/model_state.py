@@ -34,7 +34,7 @@ class State(Base):
     """
 >>>>>>> 98233e3d7d3f27f88e086d443421061c728e6d6c
     __tablename__ = 'states'
-    
+
     id = Column(Integer, primary_key=True, autoincrement=True, nullable=False)
     name = Column(String(128), nullable=False)
 
