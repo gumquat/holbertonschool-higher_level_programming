@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-script that prints the state obj w the name passed as 
+script that prints the state obj w the name passed as
 arg from database hbtn_0e_6_usa
 """
 import sys
