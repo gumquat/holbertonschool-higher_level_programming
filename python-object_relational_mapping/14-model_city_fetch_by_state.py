@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """
 script that prints all city objs from database hbtn_0e_14_usa
+AHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHH
 """
 import sys
 from model_state import Base, State
@@ -17,7 +18,7 @@ if __name__ == "__main__":
 
     """I LOVE LINE LIMITS"""
     S = sessionmaker(bind=engine)
-    s = S()
+    s = S() 
 
     cities = s.query(City).order_by(City.id).all()
 
