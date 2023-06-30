@@ -17,7 +17,7 @@ if __name__ == "__main__":
 
     """I LOVE LINE LIMITS"""
     S = sessionmaker(bind=engine)
-    s = S() 
+    s = S()
 
     cities = s.query(City).order_by(City.id).all()
 
