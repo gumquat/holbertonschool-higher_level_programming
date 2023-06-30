@@ -15,7 +15,6 @@ if __name__ == "__main__":
 
     Base.metadata.create_all(engine)
 
-    """I LOVE LINE LIMITS"""
     S = sessionmaker(bind=engine)
     s = S()
 
