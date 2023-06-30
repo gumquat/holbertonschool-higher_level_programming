@@ -18,7 +18,7 @@ if __name__ == "__main__":
     s = S()
 
     states = s.query(State).filter(State.name.like('%a%'))\
-                                 .order_by(State.id).all()
+                           .order_by(State.id).all()
 
     for state in states:
         s.delete(state)
