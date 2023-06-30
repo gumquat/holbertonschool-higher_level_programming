@@ -21,6 +21,9 @@ import all classes who inherit from base before calling Base.metadata.create_all
 Base = declarative_base()
 
 class State(Base):
+    """
+    state class
+    """
     __tablename__ = 'states'
     
     id = Column(Integer, primary_key=True, autoincrement=True, nullable=False)
