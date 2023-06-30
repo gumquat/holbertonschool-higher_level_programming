@@ -1,7 +1,6 @@
 #!/usr/bin/python3
 """
 script that prints all city objs from database hbtn_0e_14_usa
-AHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHH
 """
 import sys
 from model_state import Base, State
