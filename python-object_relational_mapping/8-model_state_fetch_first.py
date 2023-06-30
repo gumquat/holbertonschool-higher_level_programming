@@ -11,7 +11,7 @@ if __name__ == "__main__":
     engine = create_engine('mysql+mysqldb://{}:{}@localhost/{}'
                            .format(sys.argv[1], sys.argv[2],
                                    sys.argv[3]), pool_pre_ping=True)
-    
+
     Base.metadata.create_all(engine)
 
     S = sessionmaker(bind=engine)
@@ -22,4 +22,4 @@ if __name__ == "__main__":
     if state is None:
         print("Nothing")
     else:
-                print(f"{state.id}: {state.name}")
+        print(f"{state.id}: {state.name}")
