@@ -16,7 +16,7 @@ if __name__ == "__main__":
 
     """LINE LIMITS ARE FUN"""
     S = sessionmaker(bind=engine)
-    s = Session()
+    s = S()
 
     states = s.query(State).filter(State.name.LIKE('%a%'))\
                                  .order_by(State.id).all()
