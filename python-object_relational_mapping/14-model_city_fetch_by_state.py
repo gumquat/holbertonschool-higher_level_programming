@@ -12,17 +12,14 @@ if __name__ == "__main__":
     engine = create_engine('mysql+mysqldb://{}:{}@localhost/{}'
                            .format(sys.argv[1], sys.argv[2],
                                    sys.argv[3]), pool_pre_ping=True)
-    
     Base.metadata.create_all(engine)
 
-    """I LOVE LINE LIMITS"""
-    S = sessionmaker(bind=engine)
-    s = S()
+    Session = sessionmaker(bind=engine)
+    session = Session()
 
-    cities = s.query(City).order_by(City.id).all()
+    cities = session.query(City).order_by(City.id).all()
 
     for city in cities:
-        state_name = s.query(State.name).filter_by(id=city.state_id)\
+        state_name = session.query(State.name).filter_by(id=city.state_id)\
                      .first()
-        
-    print("{}:({}) {}".format(state_name[0], city.id, city.name))
+        print("{}: ({}) {}".format(state_name[0], city.id, city.name))
