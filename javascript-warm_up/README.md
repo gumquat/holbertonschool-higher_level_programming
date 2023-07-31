@@ -29,8 +29,8 @@
 const MYVAR = 'JavaScript is amazing';
 console.log(MYVAR);
 ```
-Line 1: 'Shebang' tells the operating system which program to use to run the script. In this case, the shebang line tells the operating system to use the Node.js interpreter to run the script.
-Line 2: Defines a variable called MYVAR and assigns it the value of the string "JavaScript is amazing". The const keyword is used to declare a constant, which means that the value of the variable cannot be changed.
-Line 3: Uses the console.log() method to log the value of the MYVAR variable to the console. The console.log() method is a built-in method that is used to print messages to the console.
+* Line 1: 'Shebang' tells the operating system which program to use to run the script. In this case, the shebang line tells the operating system to use the Node.js interpreter to run the script.
+* Line 2: Defines a variable called MYVAR and assigns it the value of the string "JavaScript is amazing". The const keyword is used to declare a constant, which means that the value of the variable cannot be changed.
+* Line 3: Uses the console.log() method to log the value of the MYVAR variable to the console. The console.log() method is a built-in method that is used to print messages to the console.
 
 ## problem 1
