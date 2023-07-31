@@ -142,5 +142,10 @@ if (ARGV[2] === undefined || isNaN(num)) {
   }
 }
 ```
-Line 2 and 3: Define two variables called xCounter and yCounter and initialize them to 0. The let keyword is used to declare a variable that can be changed.
-Line 4: Defines a constant called ARGV and assigns it the value of the process.argv property. The process.argv property is an array that contains the command-line arguments that were passed to the Node.js process when it was started.
+* Line 2 and 3: Define two variables called xCounter and yCounter and initialize them to 0. The let keyword is used to declare a variable that can be changed.
+* Line 4: Defines a constant called ARGV and assigns it the value of the process.argv property. The process.argv property is an array that contains the command-line arguments that were passed to the Node.js process when it was started.
+* Line 5: Defines a variable called num and assigns it the value of the ARGV[2] property. The ARGV[2] property contains the second command-line argument that was passed to the Node.js process. The parseInt() method is used to convert the value of the ARGV[2] property to a number.
+* Line 6-16: An if-else statement that checks if the value of the num variable is a number. If the value of the num variable is not a number, or if the ARGV[2] property is undefined, then the code will log the message "Missing size" to the console. Otherwise, the code will do the following:
+  * Define a variable called output and initialize it to an empty string.
+  * Create a for loop that iterates num times. Each time the loop iterates, the value of the output variable is appended with the character 'X'.
+  * Create a for loop that iterates num times. Each time the loop iterates, the code will log the value of the output variable to the console.
