@@ -75,8 +75,8 @@ if (argv[2] === undefined) {
 const argv = process.argv;
 console.log(argv[2] + ' is ' + argv[3]);
 ```
-# Line 2: Defines a variable called argv and assigns it the value of the process.argv property. The process.argv property is an array that contains the command-line arguments that were passed to the Node.js process when it was started.
-# Line 3: Uses the console.log() method to log the concatenation of the values of the argv[2] and argv[3] properties to the console. The argv[2] property contains the second command-line argument that was passed to the Node.js process, and the argv[3] property contains the third command-line argument that was passed to the Node.js process.
+* Line 2: Defines a variable called argv and assigns it the value of the process.argv property. The process.argv property is an array that contains the command-line arguments that were passed to the Node.js process when it was started.
+* Line 3: Uses the console.log() method to log the concatenation of the values of the argv[2] and argv[3] properties to the console. The argv[2] property contains the second command-line argument that was passed to the Node.js process, and the argv[3] property contains the third command-line argument that was passed to the Node.js process.
 # problem 5
 ```
 #!/usr/bin/node
@@ -149,3 +149,76 @@ if (ARGV[2] === undefined || isNaN(num)) {
   * Define a variable called output and initialize it to an empty string.
   * Create a for loop that iterates num times. Each time the loop iterates, the value of the output variable is appended with the character 'X'.
   * Create a for loop that iterates num times. Each time the loop iterates, the code will log the value of the output variable to the console.
+# problem 9
+```
+#!/usr/bin/node
+const ARGV = process.argv;
+const num1 = parseInt(ARGV[2]);
+const num2 = parseInt(ARGV[3]);
+
+console.log(add(num1, num2));
+
+function add (a, b) {
+  return a + b;
+}
+```
+* Line 2: Defines a constant called ARGV and assigns it the value of the process.argv property. The process.argv property is an array that contains the command-line arguments that were passed to the Node.js process when it was started.
+* Line 3 and 4: Define two variables called num1 and num2 and assign them the values of the second and third command-line arguments that were passed to the Node.js process. The parseInt() method is used to convert the values of the command-line arguments to numbers.
+* Line 6: Uses the console.log() method to log the result of the add() function to the console. The add() function is a function that takes two numbers as input and returns their sum.
+* Lines 8-10: Defines a function called add(). The add() function takes two numbers as input and returns their sum. The function is defined using the function keyword.
+# problem 10
+```
+#!/usr/bin/node
+const ARGV = process.argv;
+const num = parseInt(ARGV[2]);
+
+console.log(nFactorial(num));
+
+function nFactorial (n) {
+  if (n === 0 || n === 1 || isNaN(num)) {
+    return (1);
+  } else {
+    return (n * nFactorial(n - 1));
+  }
+}
+```
+* Line 2: Defines a constant called ARGV and assigns it the value of the process.argv property. The process.argv property is an array that contains the command-line arguments that were passed to the Node.js process when it was started.
+* Line 3: Defines a variable called num and assigns it the value of the second command-line argument that was passed to the Node.js process. The parseInt() method is used to convert the value of the command-line argument to a number.
+* Line : Uses the console.log() method to log the result of the nFactorial() function to the console. The nFactorial() function is a function that takes a number as input and returns its factorial.
+* Line 5-11: Defines a function called nFactorial(). The nFactorial() function takes a number as input and returns its factorial. The factorial of a number is the product of all the positive integers less than or equal to that number. The function is defined using the function keyword. The function has one parameter called n. The function first checks if the value of n is 0, 1, or not a number. If the value of n is 0, 1, or not a number, then the function returns 1. Otherwise, the function returns the product of n and the result of calling the nFactorial() function with the value of n minus 1.
+# problem 11
+```
+#!/usr/bin/node
+let counter;
+const ARGV = process.argv;
+let bigNum = 0;
+let secondBig = 0;
+
+if (ARGV[2] === undefined) {
+  console.log(0);
+} else if (ARGV[3] === undefined) {
+  console.log(0);
+} else {
+  for (counter = 2; counter < ARGV.length; counter++) {
+    if (parseInt(ARGV[counter]) > bigNum) {
+      bigNum = parseInt(ARGV[counter]);
+    }
+  }
+  for (counter = 2; counter < ARGV.length; counter++) {
+    if (parseInt(ARGV[counter]) > secondBig && ARGV[counter] < bigNum) {
+      secondBig = parseInt(ARGV[counter]);
+    }
+  }
+  console.log(secondBig);
+}
+```
+* Line 2: Defines a variable called counter and initializes it to 0. The let keyword is used to declare a variable that can be changed.
+* Line 3: Defines a constant called ARGV and assigns it the value of the process.argv property. The process.argv property is an array that contains the command-line arguments that were passed to the Node.js process when it was started.
+* Line 4 and 5: Define two variables called bigNum and secondBig and initialize them to 0. The let keyword is used to declare a variable that can be changed.
+* Lines 7-23: An if-else-else statement that checks if the second and third command-line arguments are defined. If the second and third command-line arguments are not defined, then the code will log 0 to the console. Otherwise, the code will do the following:
+  * Initialize the bigNum variable to the value of the second command-line argument.
+  * Initialize the secondBig variable to 0.
+  * Iterate through the ARGV array, starting at index 2.
+  * If the value of the current element in the array is greater than the value of the bigNum variable, then set the value of the bigNum variable to the value of the current element in the array.
+  * If the value of the current element in the array is greater than the value of the secondBig variable and the value of the current element in the array is less than the value of the bigNum variable, then set the value of the secondBig variable to the value of the current element in the array.
+  * Log the value of the secondBig variable to the console.
