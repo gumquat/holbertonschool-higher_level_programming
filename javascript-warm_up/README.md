@@ -239,3 +239,7 @@ console.log(myObject);
 * Line 7: Uses the delete keyword to delete the value property from the myObject object. The delete keyword is used to delete a property from an object.
 * Line 8: Assigns the value 89 to the value property of the myObject object.
 * Line 9: Uses the console.log() method to log the value of the myObject constant to the console. The console.log() method is used to output text to the console.
+# problem 13
+```
+TO BE DETERMINED
+```
