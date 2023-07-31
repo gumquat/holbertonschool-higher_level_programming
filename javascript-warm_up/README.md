@@ -69,3 +69,78 @@ if (argv[2] === undefined) {
 ```
 * Line 2: Defines a variable called argv and assigns it the value of the process.argv property. The process.argv property is an array that contains the command-line arguments that were passed to the Node.js process when it was started.
 * Line 4-8: An if-else statement that checks the value of the argv[2] property. The argv[2] property contains the second command-line argument that was passed to the Node.js process. If the value of the argv[2] property is undefined, then the code will log the message "No argument" to the console. Otherwise, the code will log the value of the argv[2] property to the console.
+# problem 4
+```
+#!/usr/bin/node
+const argv = process.argv;
+console.log(argv[2] + ' is ' + argv[3]);
+```
+# Line 2: Defines a variable called argv and assigns it the value of the process.argv property. The process.argv property is an array that contains the command-line arguments that were passed to the Node.js process when it was started.
+# Line 3: Uses the console.log() method to log the concatenation of the values of the argv[2] and argv[3] properties to the console. The argv[2] property contains the second command-line argument that was passed to the Node.js process, and the argv[3] property contains the third command-line argument that was passed to the Node.js process.
+# problem 5
+```
+#!/usr/bin/node
+const ARGV = process.argv;
+
+const num = parseInt(ARGV[2]);
+
+if (isNaN(num)) {
+  console.log('Not a number');
+} else {
+  console.log('My number: ' + num);
+}
+```
+* Line 2: Defines a variable called ARGV and assigns it the value of the process.argv property. The process.argv property is an array that contains the command-line arguments that were passed to the Node.js process when it was started.
+* Line 4: Defines a variable called num and assigns it the value of the ARGV[2] property. The ARGV[2] property contains the second command-line argument that was passed to the Node.js process. The parseInt() method is used to convert the value of the ARGV[2] property to a number.
+* Line 6-10: An if-else statement that checks if the value of the num variable is a number. If the value of the num variable is not a number, then the code will log the message "Not a number" to the console. Otherwise, the code will log the message "My number: " followed by the value of the num variable to the console.
+# problem 6
+```
+#!/usr/bin/node
+let counter;
+const STRING_ARRAY = ['C is fun', 'Python is cool', 'JavaScript is amazing'];
+for (counter = 0; counter < STRING_ARRAY.length; counter++) {
+  console.log(STRING_ARRAY[counter]);
+}
+```
+* Line 2: Defines a variable called counter and initializes it to 0. The let keyword is used to declare a variable that can be changed.
+* Line 3: Defines a constant called STRING_ARRAY and assigns it an array of strings. The array contains the strings "C is fun", "Python is cool", and "JavaScript is amazing".
+* Line 4-6: A for loop that iterates through the STRING_ARRAY array. The loop starts by initializing the counter variable to 0. The loop then checks if the counter variable is less than the length of the STRING_ARRAY array. If the counter variable is less than the length of the STRING_ARRAY array, then the loop will log the value of the STRING_ARRAY[counter] element to the console. The loop will then increment the counter variable by 1 and repeat.
+# problem 7
+```
+#!/usr/bin/node
+let counter;
+const ARGV = process.argv;
+const num = parseInt(ARGV[2]);
+if (isNaN(num)) {
+  console.log('Missing number of occurrences');
+} else {
+  for (counter = 0; counter < num; counter++) {
+    console.log('C is fun');
+  }
+}
+```
+Line 2: Defines a variable called counter and initializes it to 0. The let keyword is used to declare a variable that can be changed.
+Line 3: Defines a constant called ARGV and assigns it the value of the process.argv property. The process.argv property is an array that contains the command-line arguments that were passed to the Node.js process when it was started.
+Line 4: Defines a variable called num and assigns it the value of the ARGV[2] property. The ARGV[2] property contains the second command-line argument that was passed to the Node.js process. The parseInt() method is used to convert the value of the ARGV[2] property to a number.
+Line 5-11: An if-else statement that checks if the value of the num variable is a number. If the value of the num variable is not a number, then the code will log the message "Missing number of occurrences" to the console. Otherwise, the code will execute the for loop. The for loop iterates num times. Each time the loop iterates, the value of the counter variable is incremented by 1. The console.log() method is used to log the message "C is fun" to the console.
+# problem 8
+```
+#!/usr/bin/node
+let xCounter;
+let yCounter;
+const ARGV = process.argv;
+const num = parseInt(ARGV[2]);
+if (ARGV[2] === undefined || isNaN(num)) {
+  console.log('Missing size');
+} else {
+  let output = '';
+  for (xCounter = 0; xCounter < num; xCounter++) {
+    output += 'X';
+  }
+  for (yCounter = 0; yCounter < num; yCounter++) {
+    console.log(output);
+  }
+}
+```
+Line 2 and 3: Define two variables called xCounter and yCounter and initialize them to 0. The let keyword is used to declare a variable that can be changed.
+Line 4: Defines a constant called ARGV and assigns it the value of the process.argv property. The process.argv property is an array that contains the command-line arguments that were passed to the Node.js process when it was started.
