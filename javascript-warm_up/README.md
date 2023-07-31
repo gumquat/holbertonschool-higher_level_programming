@@ -222,3 +222,20 @@ if (ARGV[2] === undefined) {
   * If the value of the current element in the array is greater than the value of the bigNum variable, then set the value of the bigNum variable to the value of the current element in the array.
   * If the value of the current element in the array is greater than the value of the secondBig variable and the value of the current element in the array is less than the value of the bigNum variable, then set the value of the secondBig variable to the value of the current element in the array.
   * Log the value of the secondBig variable to the console.
+# problem 12
+```
+#!/usr/bin/node
+const myObject = {
+  type: 'object',
+  value: 12
+};
+console.log(myObject);
+delete myObject.value;
+myObject.value = 89;
+console.log(myObject);
+```
+* Lines 2-5: Defines a constant called myObject and assigns it an object literal. The object literal has two properties: type and value. The type property has the value 'object' and the value property has the value 12.
+* Line 6: Uses the console.log() method to log the value of the myObject constant to the console. The console.log() method is used to output text to the console.
+* Line 7: Uses the delete keyword to delete the value property from the myObject object. The delete keyword is used to delete a property from an object.
+* Line 8: Assigns the value 89 to the value property of the myObject object.
+* Line 9: Uses the console.log() method to log the value of the myObject constant to the console. The console.log() method is used to output text to the console.
