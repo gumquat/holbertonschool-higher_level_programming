@@ -1,3 +1,8 @@
 #!/usr/bin/node
 const add = require('./13-add').add;
-console.log(add(3, 5));
+const add = (x, y) => {
+  return x + y;
+};
+const sum = add(10, 20);
+console.log(sum);
+

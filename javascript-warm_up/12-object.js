@@ -7,3 +7,4 @@ console.log(myObject);
 delete myObject.value;
 myObject.value = 89;
 console.log(myObject);
+
