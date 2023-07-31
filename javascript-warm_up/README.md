@@ -32,5 +32,40 @@ console.log(MYVAR);
 * Line 1: 'Shebang' tells the operating system which program to use to run the script. In this case, the shebang line tells the operating system to use the Node.js interpreter to run the script.
 * Line 2: Defines a variable called MYVAR and assigns it the value of the string "JavaScript is amazing". The const keyword is used to declare a constant, which means that the value of the variable cannot be changed.
 * Line 3: Uses the console.log() method to log the value of the MYVAR variable to the console. The console.log() method is a built-in method that is used to print messages to the console.
-
+* WARNING! From this point forward, each explanation will not explain what 'shebang' is.
 ## problem 1
+```
+#!/usr/bin/node
+console.log('C is fun');
+console.log('Python is cool');
+console.log('JavaScript is amazing');
+```
+* Line 2-4: Uses the method console.log to print strings.
+## problem 2
+```
+#!/usr/bin/node
+const argv = require('process').argv;
+
+if (argv.length < 3) {
+  console.log('No argument');
+} else if (argv.length === 3) {
+  console.log('Argument found');
+} else {
+  console.log('Arguments found');
+}
+```
+* Line 2: Defines a variable called argv and assigns it the value of the process.argv property. The process.argv property is an array that contains the command-line arguments that were passed to the Node.js process when it was started.
+* Line 4-10: An if-else statement that checks the length of the argv array. If the length of the array is less than 3, the code will log the message "No argument" to the console. If the length of the array is equal to 3, the code will log the message "Argument found" to the console. Otherwise, the code will log the message "Arguments found" to the console.
+## problem 3
+```
+#!/usr/bin/node
+const argv = require('process').argv;
+
+if (argv[2] === undefined) {
+  console.log('No argument');
+} else {
+  console.log(argv[2]);
+}
+```
+* Line 2: Defines a variable called argv and assigns it the value of the process.argv property. The process.argv property is an array that contains the command-line arguments that were passed to the Node.js process when it was started.
+* Line 4-8: An if-else statement that checks the value of the argv[2] property. The argv[2] property contains the second command-line argument that was passed to the Node.js process. If the value of the argv[2] property is undefined, then the code will log the message "No argument" to the console. Otherwise, the code will log the value of the argv[2] property to the console.
