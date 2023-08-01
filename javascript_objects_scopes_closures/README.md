@@ -234,3 +234,4 @@ exports.converter = function (base) {
   *   defines a function called converter. The converter function takes one argument, base. The base argument is the base that we want to convert the number to.
   *   defines a nested function called converToBaseN. The converToBaseN function takes one argument, num. The num argument is the number that we want to convert to base base.
   *   returns the string representation of the number num in base base.
+ 
