@@ -166,4 +166,27 @@ class Square extends DefSquare {
 
 module.exports = Square;
 ```
-* Line 2: 
+* Line 2: This line imports the DefSquare class from the file 5-square.js. The require() function is used to import modules in Node.js. In this case, the require() function is importing the DefSquare class from the file 5-square.js.
+* Line 4-7: This line defines a new class called Square. The Square class extends the DefSquare class. This means that the Square class inherits all of the properties and methods of the DefSquare class. The Square class also has a constructor method that takes one argument, size, which is the size of the square. The constructor method calls the super() method to pass the size argument to the DefSquare constructor method. This ensures that the Square object has the same width and height as the DefSquare object.
+* Line 9-18: The charPrint() method prints the square to the console. The method starts by checking if the c argument is undefined. If it is, the method sets c to the string 'X'. The method then loops through the height of the square, printing a string of c characters to the console for each iteration. The length of the string is equal to the width of the square.
+* Line 20: The module.exports = Square; line exports the Square class so that it can be used by other modules. The module.exports property is used to export variables and objects from a module. In this case, the module.exports property is exporting the Square class.
+# problem 7
+```
+#!/usr/bin/node
+exports.nbOccurences = function (list, searchElement) {
+  let counter = 0;
+  for (let i = 0; i < list.length; i++) {
+    if (list[i] === searchElement) {
+      counter += 1;
+    }
+  }
+  return counter;
+};
+```
+* Line 2: This line defines a function called nbOccurences. The nbOccurences function takes two arguments, list and searchElement. The list argument is an array of elements, and the searchElement argument is the element that we are looking for in the array.
+* Line 3: This line declares a variable called counter and initializes it to 0. The counter variable will be used to keep track of the number of times the searchElement element appears in the list array.
+* Line 4-8:
+  * This line starts a for loop that will iterate through the list array. The for loop will iterate list.length times, where list.length is the length of the list array.
+  * This line checks if the element at index i in the list array is equal to the searchElement element. If it is, the counter variable is incremented by 1.
+  * This line increments the counter variable by 1.
+* Line 9: This line returns the value of the counter variable. The counter variable contains the number of times the searchElement element appears in the list array.
