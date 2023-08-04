@@ -12,4 +12,4 @@ function getRequestStatusCode (url) {
 
 const url = process.argv[2];
 
-getResquestStatusCode(url);
+getRequestStatusCode(url);
