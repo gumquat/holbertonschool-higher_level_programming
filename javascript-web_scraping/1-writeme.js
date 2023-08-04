@@ -7,8 +7,8 @@ function writeFile (filePath, content) {
    	 if (err){
       		console.log(err);
 		}
+	}
 	);
- 	}
 }
 
 const filePath = process.argv[2];
