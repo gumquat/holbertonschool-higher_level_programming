@@ -9,7 +9,7 @@ function getMovieTitle (movieId) {
       console.log(err);
     } else {
       const movie = JSON.parse(body);
-      console.log(`Title: ${movie.title}`);
+      console.log(`${movie.title}`);
     }
   });
 }
