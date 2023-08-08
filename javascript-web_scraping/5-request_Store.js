@@ -3,7 +3,6 @@ const request = require('request');
 const url = process.argv[2];
 let counter = 0;
 
-// Create promisify function
 function promisify (fn) {
   return function (...args) {
     return new Promise((resolve, reject) => {
@@ -17,7 +16,6 @@ function promisify (fn) {
 
 async function processRequest () {
   try {
-    // Promisified version of request.get
     const get = promisify(request.get);
     const { body, statusCode } = await get(url);
 
