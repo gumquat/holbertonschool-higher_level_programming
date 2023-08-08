@@ -2,13 +2,12 @@
 const process = require('process');
 const request = require('request');
 const fs = require('fs');
-
 const url = process.argv[2];
-const filePath = process.argv[3];
+const fileName = process.argv[3];
 
 request.get(url, (err, response, body) => {
   if (err) {
-    console.error(err);
+    console.log(err);
   }
 
   if (response.statusCode === 200) {
