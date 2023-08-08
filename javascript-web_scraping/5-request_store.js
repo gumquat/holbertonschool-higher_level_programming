@@ -3,39 +3,29 @@ const request = require('request');
 const url = process.argv[2];
 let counter = 0;
 
-function promisify (fn) {
-  return function (...args) {
-    return new Promise((resolve, reject) => {
-      fn(...args, (err, res) => {
-        if (err) return reject(err);
-        resolve(res);
-      });
-    });
-  };
-}
+function processResponse (err, response, body) {
+  // handle error
+  if (err) {
+    console.error(err);
+    return;
+  }
 
-async function processRequest () {
-  try {
-    const get = promisify(request.get);
-    const { body, statusCode } = await get(url);
+  // handle non-200 status code
+  if (response.statusCode !== 200) {
+    console.error('Request failed with status: ', response.statusCode);
+    return;
+  }
 
-    if (statusCode !== 200) {
-      console.error('Request failed with status:', statusCode);
-      return;
-    }
-
-    const data = JSON.parse(body).results;
-    for (const film of data) {
-      for (const character of film.characters) {
-        if (character.includes('/18/')) {
-          counter += 1;
-        }
+  // process the body within this callback
+  const data = JSON.parse(body).results;
+  for (const film of data) {
+    for (const character of film.characters) {
+      if (character.includes('/18/')) {
+        counter += 1;
       }
     }
-    console.log(counter);
-  } catch (err) {
-    console.error(err);
   }
+  console.log(counter);
 }
 
-processRequest();
+request.get(url, processResponse);
