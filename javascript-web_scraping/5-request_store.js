@@ -1,4 +1,5 @@
 #!/usr/bin/node
+const process = require('process');
 const request = require('request');
 const fs = require('fs');
 
@@ -8,20 +9,15 @@ const filePath = process.argv[3];
 request.get(url, (err, response, body) => {
   if (err) {
     console.error(err);
-    return;
   }
 
-  if (response.statusCode !== 200) {
+  if (response.statusCode === 200) {
+    fs.writeFile(fileName, body, 'utf-8', (err) => {
+      if (err) {
+        console.log(err);
+      }
+    });
+  } else {
     console.error('Request failed with status:', response.statusCode);
-    return;
   }
-
-  fs.writeFile(filePath, body, { encoding: 'utf8' }, (err) => {
-    if (err) {
-      console.error(err);
-      return;
-    }
-
-    console.log('Webpage content saved to file:', filePath);
-  });
 });
