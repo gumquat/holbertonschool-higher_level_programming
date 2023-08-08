@@ -6,24 +6,26 @@ const dictionary = {};
 let user = 0;
 
 request.get(url, (err, response, body) => {
-  if (err) return console.log(err);
-  if (response.statusCode !== 200){
+  if (err) {
     console.log(err);
-}
-  const data = JSON.parse(body);
-  data.reduce((acc, task) => {
-    if (user !== task.userId) {
-      user = task.userId;
-      counter = 0;
+  }
+
+  if (response.statusCode === 200) {
+    const data = JSON.parse(body);
+    for (const task of data) {
+      if (user !== task.userId) {
+        user = task.userId;
+        counter = 0;
+      }
+      if (task.completed) {
+        counter++;
+      }
+      if (counter !== 0) {
+        dictionary[user] = counter;
+      }
     }
-    if (task.completed) {
-      counter++;
-    }
-    if (counter !== 0) {
-      dictionary[user] = counter;
-    }
-    return acc;
-  }, {});
-  
-  console.log(dictionary);
+    console.log(dictionary);
+  } else {
+    console.error('Request failed with status:', response.statusCode);
+  }
 });
