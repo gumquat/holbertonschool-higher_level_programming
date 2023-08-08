@@ -1,31 +1,27 @@
 #!/usr/bin/node
 const request = require('request');
-const url = process.argv[2];
-let counter = 0;
+const fs = require('fs');
 
-function processResponse (err, response, body) {
-  // handle error
+const url = process.argv[2];
+const filePath = process.argv[3];
+
+request.get(url, (err, response, body) => {
   if (err) {
     console.error(err);
     return;
   }
 
-  // handle non-200 status code
   if (response.statusCode !== 200) {
-    console.error('Request failed with status: ', response.statusCode);
+    console.error('Request failed with status:', response.statusCode);
     return;
   }
 
-  // process the body within this callback
-  const data = JSON.parse(body).results;
-  for (const film of data) {
-    for (const character of film.characters) {
-      if (character.includes('/18/')) {
-        counter += 1;
-      }
+  fs.writeFile(filePath, body, { encoding: 'utf8' }, (err) => {
+    if (err) {
+      console.error(err);
+      return;
     }
-  }
-  console.log(counter);
-}
 
-request.get(url, processResponse);
+    console.log('Webpage content saved to file:', filePath);
+  });
+});
