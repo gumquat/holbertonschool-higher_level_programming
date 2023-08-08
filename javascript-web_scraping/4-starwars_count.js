@@ -3,7 +3,7 @@ const request = require('request');
 const url = process.argv[2];
 let counter = 0;
 
-function get(url) {
+function get (url) {
   return new Promise((resolve, reject) => {
     request.get(url, (err, res, body) => {
       if (err) {
@@ -17,11 +17,11 @@ function get(url) {
   });
 }
 
-async function countCharacters() {
+async function countCharacters () {
   try {
     const body = await get(url); // async operation
     const data = JSON.parse(body).results;
-    
+
     for (const film of data) {
       for (const character of film.characters) {
         if (character.includes('/18/')) {
@@ -29,7 +29,7 @@ async function countCharacters() {
         }
       }
     }
-    
+
     console.log(counter);
   } catch (error) {
     console.error(error.message);
